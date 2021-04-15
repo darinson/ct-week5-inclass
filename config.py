@@ -8,10 +8,13 @@ basedir = os.path.abspath(os.path.dirname(__file__))
 # We don't plan on changing the name or the location of the file, so we are using absolute path
 
 class Config(): #this is a class by convention
+    #this is just the object Config,dictionary that defines the app (ENV, DEBUG, TESTING, )
+
     """
     We will set Config variables for the Flask App here.
     Using Environment variables where available, otherwise
     we will create the config variables(s) if not already done.
+    https://flask.palletsprojects.com/en/1.1.x/config/
     """
 
     SECRET_KEY = os.environ.get('SECRET_KEY') or 'You will never guess...' #So we can use form
