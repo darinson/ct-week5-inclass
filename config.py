@@ -16,6 +16,6 @@ class Config(): #this is a class by convention
 
     SECRET_KEY = os.environ.get('SECRET_KEY') or 'You will never guess...' #So we can use form
     #SQLALCEHMY is the object relational mapper that will allow us to use python and sql
-    SQLALCHEMY_DATABASE_URI = os.environ.get('DATABASE_URL') or 'sqlite:///' + os.path.join(basedir,'app.db') #if the latter shows up, we know something is wrong.
+    SQLALCHEMY_DATABASE_URI = os.environ.get('DEPLOY_DATABASE_URL') or 'sqlite:///' + os.path.join(basedir,'app.db') #if the latter shows up, we know something is wrong.
     SQLALCHEMY_TRACK_MODIFICATIONS = False # Turn off update messages from the database
 
