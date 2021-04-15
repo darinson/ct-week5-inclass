@@ -50,7 +50,7 @@ def signin():
             if logged_user and check_password_hash(logged_user.password, password):
                 #if we find email and the same password
                 login_user(logged_user) #from flask login (the login_user)
-                flash('You were successfully logged in: via email/password', 'auth-sucess') #category of auth-success, which we will use in html
+                flash('You were successfully logged in: via email/password', 'auth-success') #category of auth-success, which we will use in html
                 
                 return redirect(url_for('site.home'))
             else:
