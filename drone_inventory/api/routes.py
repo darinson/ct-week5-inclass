@@ -15,7 +15,7 @@ def create_drone(current_user_token): #from token required from helpers.py
     name = request.json['name']
     description = request.json['description']
     price = request.json['price']
-    cam_quality = request.json['camera_quality'] #play around with the naming for this tonight.
+    cam_quality = request.json['cam_quality'] #play around with the naming for this tonight.
     flight_time = request.json['flight_time']
     max_speed = request.json['max_speed']
     dimensions = request.json['dimensions']
@@ -57,7 +57,7 @@ def update_drone(current_user_token, id):
     drone.name = request.json['name']
     drone.description = request.json['description']
     drone.price = request.json['price']
-    drone.cam_quality = request.json['camera_quality'] #need to make this camera_quality? was originally cam_quality
+    drone.cam_quality = request.json['cam_quality'] #need to make this camera_quality? was originally cam_quality
     drone.flight_time = request.json['flight_time']
     drone.max_speed = request.json['max_speed']
     drone.dimensions = request.json['dimensions']
